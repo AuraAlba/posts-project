@@ -1,0 +1,33 @@
+@import 'utils';
+
+.container.is-open-modal {
+
+  .post.is-open-post {
+    z-index: 200;
+    position: relative;
+
+    .post-close {
+      z-index: 210;
+      cursor: pointer;
+    }
+  }
+
+  .is-open-reaction {
+    background-color: $primary-color;
+    display: block;
+    z-index: 200;
+    position: relative;
+
+    .show-option-close {
+      z-index: 210;
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+  .modal,
+  .post .post-close {
+    display: block;
+  }
+
+}

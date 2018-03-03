@@ -1,23 +1,241 @@
-@import 'variables';
+@import 'utils';
 
-
-.body{
-    width: 100%;
-    background-color: $gray;
-    padding-top: 25px;
+header {
+  .user-header {
+    float: right;
+    opacity: 0.54;
+  }
+  .pulldow-menu {
+    display: none;
+  }
 }
 
-.post{
+.body {
+  background-color: $gray;
+
+  .post {
     background-color: $primary-color;
-    width: 100%;
-    border: 1px solid rgba(#000,0.12);
+    .post-btn{
+      text-align: right;
+      
+    }
+
+    .post-btn-publish {
+      @extend %button-style;
+      font-size: 12px;
+
+    }
+
+    .post-comment::placeholder {
+      color: $green;
+      font-weight: lighter;
+    }
+
+    .post-close{
+      @extend  %close-style;
+
+    }
+  }
+
+  .show-post {
+    background-color: $primary-color;
+
+    .show-post-single {
+      line-height: 20px;
+
+      .show-image {
+        background-color: $gray;
+      }
+
+      .show-post-info {
+
+        .show-post-paragraph {
+          line-height: 16px;
+        }
+
+        .show-post-btn {
+          background: none;
+          font-weight: lighter;
+          cursor: pointer;
+        }
+      }
+    }
+    .show-post-option-interaction{
+      display: none;
+      position: relative;
+
+      .show-option-color{
+        cursor: pointer;
+      }
+
+
+      .option-btn{
+        @extend %button-style;
+        font-size: 14px;
+      }
+
+      .show-option-close{
+        @extend %close-style;
+        display: none;
+      }
+
+    }
+
+    .show-post-interaction {
+
+      .show-reactions {
+        display: inline-block;
+
+        .reactions-circle {
+          display: inline-block;
+        }
+        .reactions-number {
+          display: inline-block;
+        }
+      }
+
+      .comments-number {
+        color: rgba(#000, 0.5);
+      }
+
+    }
+
+    .show-post-btn-interaction {
+      display: none;
+      .reaction-btn {
+        background: none;
+      }
+
+    }
+
+    .show-post-comments {
+      background-color: $gray;
+
+      .show-image {
+        display: inline-block;
+      }
+
+      .comment {
+        display: inline-block;
+        h2 {
+          display: inline-block;
+          padding-right: 5px;
+        }
+        h3 {
+          display: inline-block;
+        }
+      }
+
+    }
+    .show-post-insert{
+      background-color: $gray;
+      
+      .write-comment::placeholder{
+        color: rgba(#000, 0.4);
+      }
+    }
+  }
+  .blue{
+    background-color: $blue;
+  }
+  .red{
+    background-color: $red;
+  }
+  .yellow{
+    background-color: $yellow;
+  }
+  .green{
+    background-color: $green;
+  }
+  .black{
+    background-color: $black;
+  }
 }
-.textarea::placeholder{
-    color: $green;
-    font-weight: lighter;
+
+.modal {
+  display: none;
+  z-index: 100;
+  background-color: rgba(#000, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
 }
-.image-gray{
+
+@media only screen and (max-width: 768px) {
+  header {
+
     background-color: $gray;
-    width: 40px;
-    height: 40px;
+
+    .user-header {
+      display: none;
+    }
+
+    .pulldow-menu {
+      display: block;
+      text-align: right;
+      cursor: pointer;
+
+      span {
+        background-color: black;
+        display: block;
+      }
+    }
+  }
+  .container {
+    .post-btn-publish {
+      display: none;
+    }
+    .show-post {
+      .show-post-btn {
+        display: none;
+      }
+      .show-post-interaction {
+        .show-reactions {
+          .reactions-number {
+            display: none;
+          }
+        }
+
+      }
+      .show-post-btn-interaction {
+        display: block;
+        .reaction-btn {
+          display: inline-block;
+        }
+      }
+      .show-post-comments {
+        .show-comment {
+          .comment {
+            h2 {
+              float: left;
+              font-size: 12px;
+            }
+            h3 {
+              float: right;
+              font-size: 12px;
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+  .body{
+    .is-open-modal{
+      .post{
+        .post-btn-publish{
+          display: block;
+          font-size: 16px;
+        }
+      }
+  }
+
+
+
+  }
 }
+

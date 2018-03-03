@@ -1,0 +1,36 @@
+$primary-color: #ffffff;
+$font-family: Helvetica;
+$green: #2ECC71;
+$gray: #f4f4f4;
+$gray-lighter: rgba(#000,0.12);
+$blue: #498BF4;
+$red: #F75B60;
+$yellow:#F5C423;
+$black: #5D5D5D;
+
+%image-style{
+  border: 2px dashed rgba(#000,0.4);
+  background-color: $primary-color;
+}
+%border-elements{
+  border: 1px solid $gray-lighter;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+%button-style{
+  cursor: pointer;
+  background-color: $green;
+  color: $primary-color;
+}
+%close-style{
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+}
