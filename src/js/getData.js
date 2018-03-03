@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 
-const getData = (url,fun) => {
+const getData = (url, fun) => {
     $.getJSON(url)
         .done(fun);
 

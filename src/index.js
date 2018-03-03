@@ -13,14 +13,18 @@ const posts = [],
 
 function onDataSync(dataPosts) {
     dataPosts.forEach((dataPost) => {
-        const showPost= new ShowPost($('.show-post'), dataPost);
-        showPost.render();
-        posts.push(showPost);
+        createPost(dataPost);
     });
 }
 
-function onNewPost(evt, json) {
-    console.log(json);
+function createPost(dataPost) {
+    const showPost= new ShowPost($('.show-post'), dataPost);
+    showPost.render();
+    posts.push(showPost);
+}
+
+function onNewPost(evt, dataPost) {
+    createPost(dataPost);
 }
 
 renderHeader();

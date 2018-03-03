@@ -2,31 +2,35 @@ $primary-color: #ffffff;
 $font-family: Helvetica;
 $green: #2ECC71;
 $gray: #f4f4f4;
-$gray-lighter: rgba(#000,0.12);
+$gray-lighter: rgba(#000, 0.12);
 $blue: #498BF4;
 $red: #F75B60;
-$yellow:#F5C423;
+$yellow: #F5C423;
 $black: #5D5D5D;
 
-%image-style{
-  border: 2px dashed rgba(#000,0.4);
+%image-style {
+  border: 2px dashed rgba(#000, 0.4);
   background-color: $primary-color;
 }
-%border-elements{
+
+%border-elements {
   border: 1px solid $gray-lighter;
 }
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
-%button-style{
+
+%button-style {
   cursor: pointer;
   background-color: $green;
   color: $primary-color;
 }
-%close-style{
+
+%close-style {
   right: 0;
   top: 0;
   position: absolute;

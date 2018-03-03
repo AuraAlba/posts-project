@@ -15,9 +15,9 @@ header {
 
   .post {
     background-color: $primary-color;
-    .post-btn{
+    .post-btn {
       text-align: right;
-      
+
     }
 
     .post-btn-publish {
@@ -31,8 +31,8 @@ header {
       font-weight: lighter;
     }
 
-    .post-close{
-      @extend  %close-style;
+    .post-close {
+      @extend %close-style;
 
     }
   }
@@ -60,21 +60,20 @@ header {
         }
       }
     }
-    .show-post-option-interaction{
+    .show-post-option-interaction {
       display: none;
       position: relative;
 
-      .show-option-color{
+      .show-option-color {
         cursor: pointer;
       }
 
-
-      .option-btn{
+      .option-btn {
         @extend %button-style;
         font-size: 14px;
       }
 
-      .show-option-close{
+      .show-option-close {
         @extend %close-style;
         display: none;
       }
@@ -127,27 +126,27 @@ header {
       }
 
     }
-    .show-post-insert{
+    .show-post-insert {
       background-color: $gray;
-      
-      .write-comment::placeholder{
+
+      .write-comment::placeholder {
         color: rgba(#000, 0.4);
       }
     }
   }
-  .blue{
+  .blue {
     background-color: $blue;
   }
-  .red{
+  .red {
     background-color: $red;
   }
-  .yellow{
+  .yellow {
     background-color: $yellow;
   }
-  .green{
+  .green {
     background-color: $green;
   }
-  .black{
+  .black {
     background-color: $black;
   }
 }
@@ -224,17 +223,15 @@ header {
     }
 
   }
-  .body{
-    .is-open-modal{
-      .post{
-        .post-btn-publish{
+  .body {
+    .is-open-modal {
+      .post {
+        .post-btn-publish {
           display: block;
           font-size: 16px;
         }
       }
-  }
-
-
+    }
 
   }
 }

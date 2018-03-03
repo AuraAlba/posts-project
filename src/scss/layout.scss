@@ -10,7 +10,7 @@ header {
   }
 }
 
-.body{
+.body {
   width: 100%;
   height: auto;
   padding-top: 25px;
@@ -18,14 +18,16 @@ header {
   .container {
     margin: 25px 183px 143px 184px;
 
-    .post{
+    .post {
       @extend %border-elements;
       width: 100%;
 
-      .post-comment{
+      .post-comment {
+        @extend %border-elements;
         padding: 25px 20px 10px 20px;
+        width: 100%;
       }
-      .post-btn-publish{
+      .post-btn-publish {
         @include border-radius(5px);
         padding: 8px 25px;
         margin: 8px;
@@ -38,40 +40,40 @@ header {
       margin-top: 20px;
       width: 100%;
 
-      .show-post-single{
+      .show-post-single {
         @extend %border-elements;
         padding-top: 20px;
         position: relative;
 
-        .show-image{
+        .show-image {
           width: 40px;
           height: 40px;
           margin: 0 20px 15px 15px;
           float: left;
         }
 
-        .show-post-info{
+        .show-post-info {
           margin: 0 25px 20px 80px;
           width: 80%;
 
-          .show-post-btn{
+          .show-post-btn {
             border: none;
             margin-right: 50px;
           }
 
-          .show-post-paragraph{
-            margin:5px 0;
+          .show-post-paragraph {
+            margin: 5px 0;
             padding: 5px 0;
           }
         }
       }
 
-      .show-post-option-interaction{
+      .show-post-option-interaction {
         @extend %border-elements;
-        width: 50%;
+        width: 60%;
         padding: 15px 10px;
 
-        .show-option-color{
+        .show-option-color {
           @include border-radius(50%);
           display: inline-block;
           margin: 10px;
@@ -79,30 +81,28 @@ header {
           height: 40px;
         }
 
-        .show-option-btn{
+        .show-option-btn {
           text-align: center;
 
-          .option-btn{
-            padding: 8px 25px ;
+          .option-btn {
+            padding: 8px 25px;
             @include border-radius(5px);
           }
         }
 
-
-
       }
 
-      .show-post-interaction{
+      .show-post-interaction {
         @extend %border-elements;
         padding: 10px;
 
-        .show-interaction{
+        .show-interaction {
           display: inline-block;
 
-          .show-reactions{
+          .show-reactions {
             padding-left: 15px;
 
-            .reactions-circle{
+            .reactions-circle {
               @include border-radius(50%);
               width: 19px;
               height: 19px;
@@ -113,15 +113,13 @@ header {
 
           }
 
-          .reactions-number{
+          .reactions-number {
             padding: 5px;
             float: right;
           }
         }
 
-
-
-        .comments-number{
+        .comments-number {
           float: right;
           padding: 5px;
           display: inline-block;
@@ -130,33 +128,33 @@ header {
 
       }
 
-      .show-post-btn-interaction{
+      .show-post-btn-interaction {
         width: 100%;
-        .reaction-btn{
+        .reaction-btn {
           @extend %border-elements;
           width: 50%;
-          padding: 15px ;
+          padding: 15px;
           margin-right: -4px;
         }
       }
 
-      .show-post-comments{
+      .show-post-comments {
         @extend %border-elements;
         padding: 10px;
-        .show-comment{
+        .show-comment {
           margin: 15px 10px;
 
-          .show-image{
+          .show-image {
             display: inline-block;
             width: 35px;
             height: 35px;
           }
 
-          .comment{
+          .comment {
             padding: 0 10px;
-            float:  right;
+            float: right;
             width: 85%;
-            h4{
+            h4 {
               margin-top: 5px;
             }
           }
@@ -164,11 +162,11 @@ header {
         }
 
       }
-      .show-post-insert{
+      .show-post-insert {
         @extend %border-elements;
         padding: 15px;
 
-        .write-comment{
+        .write-comment {
           @extend %border-elements;
           width: 100%;
           padding: 15px;
@@ -181,15 +179,16 @@ header {
     }
   }
 }
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
 
   header {
     padding: 35px 120px 15px 127px;
 
-    .pulldow-menu{
+    .pulldow-menu {
       margin: 0 0 0 200px;
       width: 18px;
-      span{
+      span {
         height: 2px;
         margin-bottom: 3px;
       }
@@ -198,52 +197,50 @@ header {
 
   .body {
     padding-top: 5px;
-    .container{
+    .container {
       margin: 18px;
 
-      .show-post{
-        .show-post-single{
-          .show-post-info{
+      .show-post {
+        .show-post-single {
+          .show-post-info {
             width: 75%;
           }
         }
-        .show-post-comments{
+        .show-post-comments {
           padding: 0;
-          .show-comment{
+          .show-comment {
             margin: 25px 15px;
-            .comment{
+            .comment {
               width: 85%;
               padding: 0;
-              h3{
+              h3 {
                 margin-right: 10px;
               }
-              h4{
+              h4 {
                 margin-top: 12px;
               }
             }
           }
-          .write-comment{
+          .write-comment {
             width: 90%;
           }
 
         }
 
-
       }
     }
 
-    .is-open-modal{
-      .is-open-post{
-        .post-comment{
+    .is-open-modal {
+      .is-open-post {
+        .post-comment {
           height: 150px;
         }
 
-        .post-btn-publish{
+        .post-btn-publish {
           width: 95%;
           padding: 10px 0;
         }
       }
-
 
     }
   }

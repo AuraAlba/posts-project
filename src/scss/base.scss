@@ -1,5 +1,6 @@
 @import 'utils';
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,42 +10,43 @@ header {
   text-align: center;
 }
 
-body{
+body {
   font-family: $font-family;
 }
 
-h1{
+h1 {
   font-size: 17px;
   font-weight: bold;
 }
 
-h2{
+h2 {
   font-size: 14px;
   color: $green;
   font-weight: lighter;
 }
-h3{
+
+h3 {
   font-size: 12px;
 }
 
-h4{
+h4 {
   font-size: 10px;
-  color: rgba(#000,0.4);
+  color: rgba(#000, 0.4);
 }
 
-button{
+button {
   letter-spacing: 0.2px;
 }
 
-textarea{
+textarea {
   font-size: 14px;
 }
 
-img{
+img {
   @include border-radius(50%)
 }
 
-p{
+p {
   font-size: 14px;
 }
 

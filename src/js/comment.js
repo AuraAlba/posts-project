@@ -2,18 +2,17 @@ import $ from "jquery";
 import {compile} from "handlebars";
 import template from "../hbs/comment.hbs";
 
-class Comment{
+class Comment {
 
-    constructor($container, dataComment){
+    constructor($container, dataComment) {
         this.$container = $container;
         this.dataComment = dataComment;
     }
 
-    render(){
+    render() {
 
         const date = new Date().getTime(),
-            timePassed = Math.ceil((date - (this.dataComment.date * 1000)) / (1000 * 60 * 60 * 24));
-        console.log(date, this.dataComment.date, (date - (this.dataComment.date * 1000)));
+            timePassed = Math.round((date - (this.dataComment.date * 1000)) / (1000 * 60 * 60 * 24));
         let compileTmplate;
 
         this.dataComment.date = timePassed;

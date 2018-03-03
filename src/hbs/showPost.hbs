@@ -6,7 +6,7 @@
 
         <div class="show-post-info">
             <h2>{{user.name}}</h2>
-            <h4>{{date}}</h4>
+            <h4>Hace {{date}} dias</h4>
             <p class="show-post-paragraph">{{text}}</p>
             <button class="show-post-btn"><h2>Reaccionar</h2></button>
             <button class="show-post-btn"><h2>Comentar</h2></button>
@@ -14,11 +14,11 @@
     </div>
     <div class="show-post-option-interaction">
         <div class="show-pos-option">
-            <div class="show-option-color blue"></div>
-            <div class="show-option-color red" ></div>
-            <div class="show-option-color yellow"></div>
-            <div class="show-option-color green"></div>
-            <div class="show-option-color black"></div>
+            <div class="show-option-color blue" data-reaction="blue"></div>
+            <div class="show-option-color red" data-reaction="red"></div>
+            <div class="show-option-color yellow" data-reaction="yellow"></div>
+            <div class="show-option-color green" data-reaction="green"></div>
+            <div class="show-option-color black" data-reaction="black"></div>
         </div>
         <div class="show-option-btn">
             <button class="option-btn">Agregar</button>
@@ -33,13 +33,13 @@
 
             </div>
             <div class="reactions-number">
-                <h2>{{reactions.length}}</h2>
+                <h2 class="total-reactions">{{reactions.length}}</h2>
             </div>
         </div>
 
 
         <div class="comments-number">
-            <h3>{{comments.length}} comentarios</h3>
+            <h3 class="total-comments"><span>{{comments.length}}</span> comentarios</h3>
         </div>
     </div>
     <div class="show-post-btn-interaction">
